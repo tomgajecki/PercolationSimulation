@@ -17,7 +17,7 @@ These instructions will help you to set up and run the Percolation simulation pr
 1. **Clone or download the project**:
    - If using Git, clone the project using:
      ```
-     git clone https://example.com/your-repository-url.git
+     git clone git@github.com:tomgajecki/PercolationSimulation.git
      ```
    - Alternatively, download the ZIP file and extract it.
 
