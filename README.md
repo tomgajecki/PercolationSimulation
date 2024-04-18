@@ -64,7 +64,7 @@ Version control is handled using Git. For the available versions, see the [tags 
 
 ## Authors
 
-- **Your Name** - *Initial development*
+- **Tom Gajecki** - *Initial development*
 
 ## License
 
