@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PercolationSimulation",
+            "request": "launch",
+            "mainClass": "PercolationSimulation",
+            "projectName": "PercolationSimulation_6ba2ad22"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -38,6 +38,7 @@ public class PercolationVisualizer extends JFrame {
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             drawGrid(g);
+            displayOpenSitePercentage(g);
         }
 
         private void drawGrid(Graphics g) {
@@ -70,6 +71,27 @@ public class PercolationVisualizer extends JFrame {
             float saturation = 0.5f + random.nextFloat() * 0.5f;
             float brightness = 0.7f + random.nextFloat() * 0.3f;
             return Color.getHSBColor(hue, saturation, brightness);
+        }
+
+        private void displayOpenSitePercentage(Graphics g) {
+            int totalSites = gridSize * gridSize;
+            int openSites = percolation.numberOfOpenSites();
+            double percentageOpen = ((double) openSites / totalSites) * 100;
+            
+            // Set font color to black and increase font size
+            g.setColor(Color.BLACK);
+            g.setFont(new Font("SansSerif", Font.BOLD, 20));  // Set the font to SansSerif, Bold, size 20
+            
+            // Prepare the text to display
+            String text = String.format("Open Sites: %.2f%%", percentageOpen);
+            
+            // Calculate the x position to center the text at the bottom of the panel
+            int textWidth = g.getFontMetrics().stringWidth(text);
+            int x = (WINDOW_WIDTH - textWidth) / 2;
+            int y = WINDOW_HEIGHT - 30; // Position the text 30 pixels above the bottom of the window
+            
+            // Draw the string
+            g.drawString(text, x, y);
         }
     }
 
